@@ -54,3 +54,4 @@ spec:
             name: bluewave-app-service-<ingress_path>
             port:
               number: 8081
+              
