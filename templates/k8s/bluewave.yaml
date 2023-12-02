@@ -27,7 +27,7 @@ metadata:
     
 spec:
   selector:
-    app: bluewave-app
+    app: bluewave-app-<ingress_path>
   ports:
     - protocol: TCP
       port: 8081
