@@ -10,8 +10,8 @@ locals {
     Project   = var.sys_level == "prod" ? var.subdomain : "${var.subdomain}-${var.sys_level}"
   }
 
-  s3_static  = "${local.name_template}-static"
-  s3_reports = "${local.name_template}-reports"
+  s3_static  = lower("${local.name_template}-${var.github_username}-static")
+  s3_reports = lower("${local.name_template}-${var.github_username}-reports")
 }
 
 
