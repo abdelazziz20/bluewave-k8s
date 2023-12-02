@@ -41,12 +41,10 @@ metadata:
   name: bluewave-app-ingress-<ingress_path>
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    external-dns.alpha.kubernetes.io/hostname: bluewave.ledoux-bluewave.com
 spec:
   ingressClassName: nginx
   rules:
-  - host: '*.amazonaws.com'
-    http:
+  - http:
       paths:
       - path: /<ingress_path>
         pathType: Prefix
@@ -55,3 +53,5 @@ spec:
             name: bluewave-app-service-<ingress_path>
             port:
               number: 8081
+
+    
